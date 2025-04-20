@@ -12,7 +12,7 @@ The project is actively maintained and being expanded to support multiple ticker
 
 - Predict daily high-volatility events using historical price action
 - Engineer meaningful features from time series financial data
-- Compare baseline (logistic regression) and advanced models (Random Forest, XGBoost)
+- Compare baseline (Logistic Regression) and advanced models (Random Forest, XGBoost)
 - Extend project to multiple stocks (TSLA, AMZN, NVDA, AAPL, etc.)
 - Build interpretable and deployable machine learning tools for finance
 
@@ -29,52 +29,38 @@ The project is actively maintained and being expanded to support multiple ticker
 - Classification using:
   - Logistic Regression (baseline)
   - Random Forest (current best performer)
-- Evaluation with confusion matrices, precision, recall, and F1 scores
+- Evaluation with:
+  - Confusion matrices
+  - Precision / recall / F1 scores
 - Feature importance plots for interpretability
 
 ---
 
-## Results (Tesla Model)
+## Example Results (TSLA)
 
-**Random Forest Classifier**
-- Accuracy: 98%
-- Volatility Recall: 89%
-- Precision: 100%
+**Random Forest Classifier**  
+- Accuracy: 98%  
+- Volatility Recall: 89%  
+- Precision: 100%  
 
 The model demonstrated strong predictive power in identifying volatility spikes in TSLA over a one-year period.
 
 ---
 
-## Roadmap
+## Repository Structure
 
-### Multi-Ticker Support
-- [x] Tesla (TSLA)
-- [ ] Amazon (AMZN)
-- [ ] NVIDIA (NVDA)
-- [ ] Apple (AAPL)
-- [ ] Microsoft (MSFT)
-
-### Feature Expansion
-- [ ] Technical indicators from `pandas-ta` (e.g., RSI, MACD, Bollinger Bands)
-- [ ] Macroeconomic inputs (CPI, Fed statements)
-- [ ] News and sentiment signals (Reddit, Twitter, headlines)
-
-### Usability & Deployment
-- [ ] Modular pipeline for multi-stock training
-- [ ] Dashboard integration (Streamlit or Gradio)
-- [ ] Exportable daily prediction summaries
-- [ ] Continuous data updates via scheduling
 
 ---
 
-## Tech Stack
+## How to Use
 
-- Python (Pandas, NumPy, Matplotlib)
-- scikit-learn (Logistic Regression, Random Forest)
-- yFinance (live stock data)
-- Streamlit / Plotly (planned)
-- pandas-ta, NLP (planned)
+```python
+from src.run_model import run_volatility_model
 
----
+run_volatility_model("TSLA")
+run_volatility_model("NVDA")
+run_volatility_model("AMZN")
 
-## Repository Structure (Planned)
+Houston Molinaro
+Data Science Student – University of Arkansas
+Focused on predictive modeling, financial analytics, and ML-powered trading tools.
